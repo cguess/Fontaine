@@ -1,7 +1,7 @@
 # Fontaine
-###By: Christopher Guess / Knight International Journalism Fellow
+### By: Christopher Guess / Knight International Journalism Fellow
 Contact: [cguess@gmail.com](mailto://cguess@gmail.com "cguess@gmail.com") / [cguess@icfj.org](mailto://cguess@icfj.org "cguess@gmail.com") / [@cguess](http://www.twitter.com/cguess "@cguess")
---------------
+****************
 
 A scraper for https://ec.europa.eu/commission/2014-2019/agenda_en
 
