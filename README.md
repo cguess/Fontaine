@@ -1,17 +1,17 @@
 # Fontaine
-## A scraper for https://ec.europa.eu/commission/2014-2019/agenda_en
 ###By: Christopher Guess / Knight International Journalism Fellow
-###Contact: [cguess@gmail.com](mailto://cguess@gmail.com "cguess@gmail.com") / [cguess@icfj.org](mailto://cguess@icfj.org "cguess@gmail.com") / [@cguess](http://www.twitter.com/cguess "@cguess")
+Contact: [cguess@gmail.com](mailto://cguess@gmail.com "cguess@gmail.com") / [cguess@icfj.org](mailto://cguess@icfj.org "cguess@gmail.com") / [@cguess](http://www.twitter.com/cguess "@cguess")
+--------------
+
+A scraper for https://ec.europa.eu/commission/2014-2019/agenda_en
 
 This scraper was created during the Dataharvest hackathon on May 7, 2015 in Brussels, Belgium.
 
 ##Requirements
-----------------------------
 * Python 3
 * Beautiful Soup 4
 
 ##Installation
-----------------------------
 1. Clone repository 
 2. Install Beautiful Soup
     pip install beautifulsoup4 
