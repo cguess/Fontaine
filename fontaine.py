@@ -5,6 +5,7 @@ import json
 from meeting import Meeting
 import csv
 from datetime import date
+import calendar
 
 def do():
   #So, this is how it goes
@@ -58,6 +59,13 @@ def parse_data_into_meetings(data, year):
 
   meetings_array = []
   for meeting in meetings:
+    #if the month is two, just take the first
+    month = meeting.find(class_='month').get_text()
+    spans_multiple_months = False
+    if len(month) > 3:
+      month = month.split()[0]
+      spans_multiple_months = True
+
     #if day is a range we have to split it, get the first date, and then set length
     day = 0
     #default length
@@ -65,17 +73,17 @@ def parse_data_into_meetings(data, year):
     day_text = meeting.find(class_='day').get_text().encode('utf-8')
     if len(day_text) > 2:
       day_text_parts = day_text.split("-")
-      length = int(day_text_parts[1]) - int(day_text_parts[0])
       day = int(day_text_parts[0])
+
+      if(spans_multiple_months == False):
+        length = int(day_text_parts[1]) - int(day_text_parts[0])
+      else:
+        month_number = Meeting.number_for_month_name(month)
+        number_of_days_in_month = calendar.monthrange(year, month_number)
+        length = int(day_text_parts[1]) + (number_of_days_in_month[1] - int(day_text_parts[0]))
     else: 
       day = int(day_text)
-      
-    #if the month is two, just take the first
-    month = meeting.find(class_='month').get_text()
-
-    if len(month) > 3:
-      month = month.split()[0]
-      
+            
     text = meeting.find(class_='views-field-field-activity-link').get_text()
     name = meeting.find("span", class_='field-content').get_text()
     meeting_object = Meeting(name, text, year, month, day, length)

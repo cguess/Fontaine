@@ -6,9 +6,10 @@ class Meeting:
   def __init__(self, name, text, year, month, day, length):
         self.name = name.lstrip().rstrip().encode('utf-8')
         self.text = text.lstrip().rstrip().encode('utf-8')
-        self.date = datetime.date(year, self.number_for_month_name(month), day)
+        self.date = datetime.date(year, Meeting.number_for_month_name(month), day)
         self.length = length
-        
+  
+  @classmethod      
   def number_for_month_name(self, month):
         #note: there's no default case here, should fix that
         return {
