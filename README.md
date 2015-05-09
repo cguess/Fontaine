@@ -7,6 +7,7 @@ A scraper for https://ec.europa.eu/commission/2014-2019/agenda_en
 
 This scraper was created during the Dataharvest hackathon on May 7, 2015 in Brussels, Belgium.
 
+The data, as of May 6, 2015 can be downloaded directly from [http://bit.ly/1ciftWu](http://bit.ly/1ciftWu, "http://bit.ly/1ciftWu")
 ##Requirements
 * Python 3
 * Beautiful Soup 4
